@@ -16,8 +16,8 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-        x = -tmr
-        screen.blit(bg_img, [-tmr, 0]) #screen Surfaceに背景画像surfaceを貼り付ける
+        x = -tmr%800
+        screen.blit(bg_img, [-x, 0]) #screen Surfaceに背景画像surfaceを貼り付ける
         screen.blit(bg_img, [300, 200])  #screen sufaceにこうかとん画像
         pg.display.update()
         tmr += 1        
